@@ -1,5 +1,10 @@
 FROM debian:bookworm-slim
 
+# Define build arguments that can contain commas
+ARG NGINX_MODULES=""
+ARG BUILD_OPTIONS=""
+ARG CONFIGURE_FLAGS=""
+
 # Copy entire NGINX install directory
 COPY ./nginx /usr/local/nginx
 
